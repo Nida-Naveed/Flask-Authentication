@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% with messages = get_flashed_messages() %}
+
+<div class="box">
+  <h1>Flask Authentication</h1>
+    {% if messages %}
+    <div class=flashes>
+    {% for message in messages %}
+      <p>{{ message }}</p>
+    {% endfor %}
+    </div>
+    {% endif %}
+  {% endwith %}
+  <!-- TODO: Hide the Login/Registration buttons for logged-in users -->
+  <a href="{{ url_for('login') }}" class="btn btn-primary btn-block btn-large">
+    Login
+  </a>
+
+  <a href="{{ url_for('register') }}" class="btn btn-secondary btn-block btn-large">
+    Register
+  </a>
+
+</div>
+
+{% endblock %}
