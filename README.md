@@ -36,9 +36,6 @@ It supports user registration, login, logout, and protected routes with session 
 
 ---
 
-
----
-
 ## ⚙️ Installation & Setup
 
 ### 1. Clone repository
